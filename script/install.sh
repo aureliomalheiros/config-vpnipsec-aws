@@ -9,7 +9,7 @@ sudo -i apt install -y strongswan
 
 sudo bash -c "echo \#Static Routes  >> /etc/network/interfaces"
 sudo bash -c "echo up route del -net 0.0.0.0/0 gw `ip route | grep default |egrep '[0-9\.]{6,}[$1]' | awk  {'print $3'}` dev eth0  >> /etc/network/interfaces"
-sudo bash -c "echo up route del -net 0.0.0.0/0 gw `ip addr | egrep '[0-9\.]{6,}/24' | awk '{print $2}' | cut -d/ -f1` dev eth0  >> /etc/network/interfaces"
+sudo bash -c "echo up route add -net 0.0.0.0/0 gw `ip addr | egrep '[0-9\.]{6,}/24' | awk '{print $2}' | cut -d/ -f1` dev eth0  >> /etc/network/interfaces"
 
 tab="$(printf '\t')"
 sudo bash -c "cat << EOF > /etc/ipsec.conf
@@ -25,8 +25,8 @@ ${tab}keyexchange=ikev1
 ${tab}authby=secret
 ${tab}auto=start
 ${tab}type=tunnel
-${tab}leftid=#IP PUBLICO
-${tab}leftsubnet=#IP DA REDE
+${tab}leftid=#IP PUBLICO LOCAL
+${tab}leftsubnet=#IP DA REDE LOCAL
 ${tab}leftauth=psk
 conn vpn
 ${tab}right=#DNS OU IP PUBLICO REMOTO
