@@ -19,7 +19,7 @@ Vai aparecer dessa forma
 
 Após inserir o código
 <p>
-    <img alt="User Data" src="images/user-data2.png">
+    <img alt="User Data" src="images/user-data1.png">
 </p>
 
 Agora pode continuar a criação da instância.
