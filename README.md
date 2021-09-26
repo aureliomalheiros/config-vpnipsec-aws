@@ -1,9 +1,9 @@
 ## Script para configuração do StrongSwan no Provedor AWS
 
-### **:seedling: Descrição do Projeto
+### :seedling: Descrição do Projeto
 Instruções para instalação e configuração do StrongSwan na AWS.
 
-### **:pencil2: Pré-requisitos
+### :pencil2: Pré-requisitos
 - par de chaves na AWS
 - Instância EC2 ubuntu 20.04
 
@@ -59,7 +59,7 @@ Instruções para instalação e configuração do StrongSwan na AWS.
     <img alt="User Data" src="images/route02.png">
 </p>
 
-### **:speaking_head: Observações
+### :speaking_head: Observações
 
 - O ambiente apresentado é apenas a instalação e configuração da instância na AWS, não sendo feito a comunicação entre tuneis IPsec, dessa forma é necessário que você faça esses passos.
 Em caso de dúvidas abaixo temos o link de exemplos:
