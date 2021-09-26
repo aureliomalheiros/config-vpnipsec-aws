@@ -8,7 +8,9 @@ Instruções para instalação e configuração do StrongSwan na AWS.
 - Instância EC2 ubuntu 20.04
 
 ### 🚀 Execução
-1. Acesse o diretório script e copie o algoritmo.
+1. Acesse o diretório script que está nesse repositório e copie o algoritmo.
+
+[install.sh](https://github.com/aureliomalheiros/config-vpnipsec-aws/blob/dev/script/install.sh)
 
 2. Na etapa de **Configure Instance** em **User data**, você deve colocar o script
 
